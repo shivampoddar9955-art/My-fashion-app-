@@ -87,7 +87,8 @@ with action_tab2:
     with st.form("product_form_main", clear_on_submit=True):
         p_name = st.text_input("Item Name (e.g., Saree, Kurti, Jeans)", key="main_prod_name").strip()
         cp = st.number_input("Cost Price Per Piece (₹)", min_value=0.0, format="%.2f", key="main_prod_cp")
-        submit_p = st.form_submit_with_button("📦 Add to My Fashion Collection")
+      submit_p = st.form_submit_button("📦 Add Item")
+  (
 
         if submit_p and p_name and cp > 0:
             if p_name in products_df["Item/Design Name"].values:
