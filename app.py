@@ -1,4 +1,4 @@
-import streamlit as st
+with streamlit as st
 import pandas as pd
 import os
 
@@ -81,14 +81,13 @@ with action_tab1:
     else:
         st.info("⚠️ Pehle 'ADD NEW ITEM' tab mein jaakar apne kapde add kariye, uske baad yahan sell kar payenge.")
 
-# 2. ADD ITEM TAB
-with action_tab2:
+# 2. ADD ITEM TATAwiththction_tab2:
     st.markdown("### ➕ Add New Clothing Item to Stock")
     with st.form("product_form_main", clear_on_submit=True):
         p_name = st.text_input("Item Name (e.g., Saree, Kurti, Jeans)", key="main_prod_name").strip()
         cp = st.number_input("Cost Price Per Piece (₹)", min_value=0.0, format="%.2f", key="main_prod_cp")
-      submit_p = st.form_submit_button("📦 Add Item")
-  (
+        submit_p = st.form_submit_button("📦 Add Item")
+  
 
         if submit_p and p_name and cp > 0:
             if p_name in products_df["Item/Design Name"].values:
